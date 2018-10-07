@@ -1,0 +1,34 @@
+<?php
+/**
+ * Copyright © 2016 ShopGo. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/** @var $block \ShopGo\Shepherd\Block\Adminhtml\Head */
+?>
+
+<?php if ($this->isActive()): ?>
+<?php if ($tourSteps = $this->getTourSteps(true)): ?>
+<script>
+    if (!shopgo || typeof shopgo != 'object') {
+        var shopgo = new Object();
+    }
+
+    shopgo.shepherd = {
+        "fullActionName": "<?php echo $this->getFullActionName() ?>",
+        "disableTourUrl": "<?php echo $this->getDisableTourUrl() ?>",
+        "disableTourMessage": {
+            "current": "<?php echo $this->getDisableTourMessage('current') ?>",
+            "all": "<?php echo $this->getDisableTourMessage('all') ?>"
+        },
+        "tourSteps" : <?php echo $tourSteps ?>
+    };
+</script>
+<?php //TODO: CSS files are added inside body tag, which works, but not common. Will look for a better way to handle it ?>
+<link rel="stylesheet" type="text/css" media="all" href="<?php /* @escapeNotVerified */ echo $this->getThemeCssHref() ?>"/>
+<link rel="stylesheet" type="text/css" media="all" href="<?php /* @escapeNotVerified */ echo $this->getAssetUrl('ShopGo_Shepherd::css/shepherd-custom.css') ?>"/>
+<script src="<?php /* @escapeNotVerified */ echo $this->getAssetUrl('ShopGo_Shepherd::js/init.js') ?>"></script>
+<?php endif ?>
+<?php endif ?>

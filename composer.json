@@ -1,6 +1,6 @@
 {
-    "name": "shopgo/shepherd",
-    "description": "Adds a tour feature to Magento 2.",
+    "name": "shopgo/module-shepherd-tour-guide",
+    "description": "Integrates Magento 2 with HubSpot Shepherd.",
     "type": "magento2-module",
     "version": "1.0.0",
     "license": [

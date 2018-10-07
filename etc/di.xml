@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 ShopGo. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <virtualType name="ShopGo\Shepherd\Model\Tour\System\Config\SchemaLocator" type="ShopGo\Shepherd\Model\Config\SchemaLocator">
+        <arguments>
+            <argument name="fileName" xsi:type="string">tour.xsd</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="ShopGo\Shepherd\Model\Tour\System\Config\File" type="ShopGo\Shepherd\Model\Config\File">
+        <arguments>
+            <argument name="schemaLocator" xsi:type="object">ShopGo\Shepherd\Model\Tour\System\Config\SchemaLocator</argument>
+            <argument name="fileName" xsi:type="string">tour.xml</argument>
+        </arguments>
+    </virtualType>
+    <type name="ShopGo\Shepherd\Model\Config">
+        <arguments>
+            <argument name="fileConfig" xsi:type="object">ShopGo\Shepherd\Model\Tour\System\Config\File</argument>
+        </arguments>
+    </type>
+</config>

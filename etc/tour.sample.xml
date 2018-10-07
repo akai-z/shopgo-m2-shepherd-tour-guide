@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 ShopGo. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:ShopGo_Shepherd:etc/tour.xsd">
+    <users>
+        <user name="*">
+            <exclude>support</exclude>
+        </user>
+    </users>
+    <defaults>
+        <config name="classes">shepherd-theme-arrows</config>
+        <config name="scrollTo">1</config>
+        <config name="showCancelLink">1</config>
+    </defaults>
+    <tours translate="title text">
+        <tour full_action_name="adminhtml_dashboard_index">
+            <step name="welcome">
+                <config name="text"><![CDATA[test2]]></config>
+                <config name="buttons">
+                    <button>
+                        <config name="text">Exit</config>
+                        <config name="action">cancel</config>
+                    </button>
+                    <button>
+                        <config name="text">Start</config>
+                        <config name="action">next</config>
+                    </button>
+                </config>
+            </step>
+            <step name="first">
+                <config name="title">test</config>
+                <config name="text"><![CDATA[test2]]></config>
+                <config name="attachTo">.page-actions left</config>
+                <config name="buttons">
+                    <button>
+                        <config name="text">Back</config>
+                        <config name="action">back</config>
+                    </button>
+                    <button>
+                        <config name="text">Done</config>
+                        <config name="action">next</config>
+                    </button>
+                </config>
+            </step>
+        </tour>
+    </tours>
+</config>
