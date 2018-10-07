@@ -1,9 +1,8 @@
-Shepherd
-========
+Shepherd Tour Guide
+===================
 
 
 #### Contents
-*   [Synopsis](#syn)
 *   [Overview](#over)
 *   [Installation](#install)
 *   [Tests](#tests)
@@ -11,13 +10,12 @@ Shepherd
 *   [License](#lic)
 
 
-## <a name="syn"></a>Synopsis
-
-TODO
-
 ## <a name="over"></a>Overview
 
-TODO
+A module that adds a tour guide feature to Magento 2.  
+The module is powered by [Hubspot Shepherd](https://github.com/shipshapecode/shepherd).
+
+It supports Magento 2 admin panel only.
 
 ## <a name="install"></a>Installation
 
